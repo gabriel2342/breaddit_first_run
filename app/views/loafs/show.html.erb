@@ -1,8 +1,11 @@
 <main class="container">
-  <%= link_to sanitize("&larr; Back to loafs"), loaf_path %>
+  <%= link_to sanitize("&larr; Back to loafs"), loafs_path %>
   <div class="header">
     <h1>
-      <%= @loaf.name %>
+      <%= @loaf.title %>
     </h1>
+    <p>
+      <%= @loaf.body %>
+    </p>
   </div>
 </main>

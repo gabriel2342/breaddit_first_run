@@ -5,8 +5,8 @@ en:
         title: Name of your loaf
         body: loaf description and/or recipe
     labels:
-      loaf
-        title: Name
+      loaf:
+        title: Your Loaf's Name  
         body: Enter text
 
   helpers:

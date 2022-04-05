@@ -5,26 +5,28 @@ class LoafsController < ApplicationController
     @loafs = Loaf.all 
   end
 
-  def show; end
+  def show
+    @loaf = Loaf.find(params[:id])
+  end
 
   def new
     @loaf = Loaf.new
   end
 
   def create 
-    @loaf = Loaf.new(loaf_params)
+    @loaf = Loaf.new(title: "...", body: "...")
 
     if @loaf.save
       redirect_to loafs_path, notice: "Loaf was successfully created."
     else
-      render :new 
+      render :new,  status: :unprocessable_entity
     end
   end
 
   def edit; end
 
   def update
-    if @loaf.update(loaf_params)
+    if @loaf.update(title: "...", body: "..."))
       redirect_to loafs_path, notice: "Loaf was successfully updated."
     else
       render :edit
@@ -42,9 +44,10 @@ class LoafsController < ApplicationController
     @loaf = Loaf.find(params[:id])
   end
 
-  def loaf_params
-    params.require(:loaf).permit(:title).permit(:body)
-  end
+  # def loaf_params
+  #   params.require(:loaf).permit(:title)
+  #   params.require(:loaf).permit(:body)
+  # end
 
 
 end
