@@ -1,7 +1,8 @@
 class CreateLoafs < ActiveRecord::Migration[7.0]
   def change
     create_table :loafs do |t|
-      t.string :title
+      t.string :title, null: false
+      t.text :body, null: false
 
       t.timestamps
     end

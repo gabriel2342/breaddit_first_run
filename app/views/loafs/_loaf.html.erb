@@ -1,0 +1,13 @@
+
+<div class="loaf">
+  <%= link_to loaf.name, loaf_path(quote) %>
+  <div class="loaf__actions">
+    <%= button_to "Delete",
+                  loaf_path(loaf),
+                  method: :delete,
+                  class: "btn btn--light" %>
+    <%= link_to "Edit",
+                edit_quote_path(loaf),
+                class: "btn btn--light" %>
+  </div>
+</div>

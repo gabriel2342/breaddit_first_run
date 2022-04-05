@@ -1,0 +1,16 @@
+en:
+  simple_form:
+    placeholders:
+      loaf:
+        title: Name of your loaf
+        body: loaf description and/or recipe
+    labels:
+      loaf
+        title: Name
+        body: Enter text
+
+  helpers:
+    submit:
+      loaf:
+        create: Create loaf
+        update: Update loaf

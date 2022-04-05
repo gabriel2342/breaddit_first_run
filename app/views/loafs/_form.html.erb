@@ -1,0 +1,13 @@
+<%# app/views/loafs/_form.html.erb %>
+
+<%= simple_form_for loaf, html: { class: "loaf form" } do |f| %>
+  <% if loaf.errors.any? %>
+    <div class="error-message">
+      <%= loaf.errors.full_messages.to_sentence.capitalize %>
+    </div>
+  <% end %>
+
+  <%= f.input :title, input_html: { autofocus: true } %>
+  <% f.input :body, input_html: {autofocus: false}%>
+  <%= f.submit class: "btn btn--secondary" %>
+<% end %>

@@ -1,0 +1,10 @@
+<main class="container">
+  <div class="header">
+    <h1>Loaves of Breddit</h1>
+    <%= link_to "New loaf",
+                new_loaf_path,
+                class: "btn btn--primary" %>
+  </div>
+
+  <%= render @loafs %>
+</main>
