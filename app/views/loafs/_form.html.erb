@@ -1,13 +1,21 @@
-<%# app/views/loafs/_form.html.erb %>
+<%= form_with model: loaf do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <% loaf.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
 
-<%= simple_form_for loaf, html: { class: "loaf form" } do |f| %>
-  <% if loaf.errors.any? %>
-    <div class="error-message">
-      <%= loaf.errors.full_messages.to_sentence.capitalize %>
-    </div>
-  <% end %>
+  <div>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %><br>
+    <% loaf.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
 
-  <%= f.input :title, input_html: { autofocus: true } %><br>
-  <% f.text_area :body %><br>
-  <%= f.submit class: "btn btn--secondary" %>
+  <div>
+    <%= form.submit %>
+  </div>
 <% end %>

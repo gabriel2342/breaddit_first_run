@@ -2,7 +2,7 @@ require "application_system_test_case"
 
 class BreaditsTest < ApplicationSystemTestCase
     setup do 
-      @loaf = loafs(:first)
+      @loaf = loaves(:first)
     end
   
   
@@ -16,7 +16,7 @@ class BreaditsTest < ApplicationSystemTestCase
     fill_in "body text", with: "Capybara post"
     click_on "Create Loaf"
 
-    assert_selector "h1", text: "Loafs"
+    assert_selector "h1", text: "Loaves"
     assert_text "Capybara post"
   end
 

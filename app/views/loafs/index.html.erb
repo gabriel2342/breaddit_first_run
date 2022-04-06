@@ -1,11 +1,14 @@
 <main class="container">
   <div class="header">
-    <h1>Loaves of Breddit</h1>
-    <%= link_to "New loaf",
-                new_loaf_path,
+    <h1>Loaves of Breaddit</h1><br>
+
+    <%= link_to "Add your loaf",
+                new_loaves_path,
                 class: "btn btn--primary" %>
   </div>
   
-    <%= render @loafs %>
+    <%= render @loaves %><br>
+
+    
 
 </main>

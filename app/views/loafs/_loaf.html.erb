@@ -1,9 +1,9 @@
 
 <div class="loaf">
-  <%= link_to loaf.title, loaf_path(loaf) %>
+  <%= link_to loaf.title, loaves_path(loaf) %>
   <div class="loaf__actions">
     <%= button_to "Delete",
-                  loaf_path(loaf),
+                  loaves_path(loaf),
                   method: :delete,
                   class: "btn btn--light" %>
     <%= link_to "Edit",

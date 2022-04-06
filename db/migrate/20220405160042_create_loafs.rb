@@ -1,6 +1,6 @@
-class CreateLoafs < ActiveRecord::Migration[7.0]
+class CreateLoaves < ActiveRecord::Migration[7.0]
   def change
-    create_table :loafs do |t|
+    create_table :loaves do |t|
       t.string :title
       t.text :body
 

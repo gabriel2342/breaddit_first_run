@@ -1,10 +1,12 @@
 <main class="container">
-  <%= link_to sanitize("&larr; Back to loafs"), loafs_path %>
+  <%= link_to sanitize("&larr; Back to loaves"), loaves_path %>
 
   <div class="header">
-    <h1>New loaf</h1>
+    <h1>Bake a new loaf</h1>
   </div>
 
+
   <%= render "form", loaf: @loaf %>
+
   
 </main>
